@@ -16,7 +16,10 @@ async function handleSubmit(event){
                 username: username.data,
                 password: password.data,
             })
+            
         }) 
+        const result = await response.json();
+        console.log(result)
     }  catch(error) {
             setError(error.message)
     }
